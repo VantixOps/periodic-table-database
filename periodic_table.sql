@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict gvH89MUqWYc12Efnc9lZoWQtb9Ut67jvVNsLKTYTf0BOhb7O4bkrdoqoXqE8Rkf
+\restrict i8TdWzSnjdCoj2giMgh9uHpzadquRKKDluTyhCJ6dPLi8LGIUoOGIpEj1JEx4N3
 
 -- Dumped from database version 18.6
 -- Dumped by pg_dump version 18.6
@@ -29,9 +29,9 @@ CREATE DATABASE periodic_table WITH TEMPLATE = template0 ENCODING = 'UTF8' LOCAL
 
 ALTER DATABASE periodic_table OWNER TO freecodecamp;
 
-\unrestrict gvH89MUqWYc12Efnc9lZoWQtb9Ut67jvVNsLKTYTf0BOhb7O4bkrdoqoXqE8Rkf
+\unrestrict i8TdWzSnjdCoj2giMgh9uHpzadquRKKDluTyhCJ6dPLi8LGIUoOGIpEj1JEx4N3
 \connect periodic_table
-\restrict gvH89MUqWYc12Efnc9lZoWQtb9Ut67jvVNsLKTYTf0BOhb7O4bkrdoqoXqE8Rkf
+\restrict i8TdWzSnjdCoj2giMgh9uHpzadquRKKDluTyhCJ6dPLi8LGIUoOGIpEj1JEx4N3
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -69,7 +69,7 @@ ALTER TABLE public.elements OWNER TO freecodecamp;
 CREATE TABLE public.properties (
     atomic_number integer NOT NULL,
     type character varying(30),
-    atomic_mass numeric(9,6) CONSTRAINT properties_weight_not_null NOT NULL,
+    atomic_mass numeric CONSTRAINT properties_weight_not_null NOT NULL,
     melting_point_celsius numeric NOT NULL,
     boiling_point_celsius numeric NOT NULL,
     type_id integer NOT NULL
@@ -109,15 +109,15 @@ INSERT INTO public.elements VALUES (1000, 'Mt', 'moTanium');
 -- Data for Name: properties; Type: TABLE DATA; Schema: public; Owner: freecodecamp
 --
 
-INSERT INTO public.properties VALUES (4, 'metal', 9.012200, 1287, 2470, 1);
-INSERT INTO public.properties VALUES (3, 'metal', 6.940000, 180.54, 1342, 1);
-INSERT INTO public.properties VALUES (1000, 'metalloid', 1.000000, 10, 100, 2);
-INSERT INTO public.properties VALUES (5, 'metalloid', 10.810000, 2075, 4000, 2);
-INSERT INTO public.properties VALUES (8, 'nonmetal', 15.999000, -218, -183, 3);
-INSERT INTO public.properties VALUES (7, 'nonmetal', 14.007000, -210.1, -195.8, 3);
-INSERT INTO public.properties VALUES (6, 'nonmetal', 12.011000, 3550, 4027, 3);
-INSERT INTO public.properties VALUES (2, 'nonmetal', 4.002600, -272.2, -269, 3);
-INSERT INTO public.properties VALUES (1, 'nonmetal', 1.008000, -259.1, -252.9, 3);
+INSERT INTO public.properties VALUES (4, 'metal', 9.0122, 1287, 2470, 1);
+INSERT INTO public.properties VALUES (3, 'metal', 6.94, 180.54, 1342, 1);
+INSERT INTO public.properties VALUES (1000, 'metalloid', 1, 10, 100, 2);
+INSERT INTO public.properties VALUES (5, 'metalloid', 10.81, 2075, 4000, 2);
+INSERT INTO public.properties VALUES (8, 'nonmetal', 15.999, -218, -183, 3);
+INSERT INTO public.properties VALUES (7, 'nonmetal', 14.007, -210.1, -195.8, 3);
+INSERT INTO public.properties VALUES (6, 'nonmetal', 12.011, 3550, 4027, 3);
+INSERT INTO public.properties VALUES (2, 'nonmetal', 4.0026, -272.2, -269, 3);
+INSERT INTO public.properties VALUES (1, 'nonmetal', 1.008, -259.1, -252.9, 3);
 
 
 --
@@ -205,5 +205,5 @@ ALTER TABLE ONLY public.properties
 -- PostgreSQL database dump complete
 --
 
-\unrestrict gvH89MUqWYc12Efnc9lZoWQtb9Ut67jvVNsLKTYTf0BOhb7O4bkrdoqoXqE8Rkf
+\unrestrict i8TdWzSnjdCoj2giMgh9uHpzadquRKKDluTyhCJ6dPLi8LGIUoOGIpEj1JEx4N3
 
