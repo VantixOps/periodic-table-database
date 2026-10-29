@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict N2hVOLwwl7UEYdv2PSYqdwBtZr8IbkaG6FfpVRDPnZzO7hHZBQ1emleEKd2hPMP
+\restrict g2RyQa4HsRVzTceJHTwRrePiJeR4gVy7YkkoRh1P2u85vXfjcJmR7cXpQhqe2rD
 
 -- Dumped from database version 18.6
 -- Dumped by pg_dump version 18.6
@@ -29,9 +29,9 @@ CREATE DATABASE periodic_table WITH TEMPLATE = template0 ENCODING = 'UTF8' LOCAL
 
 ALTER DATABASE periodic_table OWNER TO freecodecamp;
 
-\unrestrict N2hVOLwwl7UEYdv2PSYqdwBtZr8IbkaG6FfpVRDPnZzO7hHZBQ1emleEKd2hPMP
+\unrestrict g2RyQa4HsRVzTceJHTwRrePiJeR4gVy7YkkoRh1P2u85vXfjcJmR7cXpQhqe2rD
 \connect periodic_table
-\restrict N2hVOLwwl7UEYdv2PSYqdwBtZr8IbkaG6FfpVRDPnZzO7hHZBQ1emleEKd2hPMP
+\restrict g2RyQa4HsRVzTceJHTwRrePiJeR4gVy7YkkoRh1P2u85vXfjcJmR7cXpQhqe2rD
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -156,8 +156,16 @@ ALTER TABLE ONLY public.properties
 
 
 --
+-- Name: properties properties_atomic_number_fkey; Type: FK CONSTRAINT; Schema: public; Owner: freecodecamp
+--
+
+ALTER TABLE ONLY public.properties
+    ADD CONSTRAINT properties_atomic_number_fkey FOREIGN KEY (atomic_number) REFERENCES public.elements(atomic_number);
+
+
+--
 -- PostgreSQL database dump complete
 --
 
-\unrestrict N2hVOLwwl7UEYdv2PSYqdwBtZr8IbkaG6FfpVRDPnZzO7hHZBQ1emleEKd2hPMP
+\unrestrict g2RyQa4HsRVzTceJHTwRrePiJeR4gVy7YkkoRh1P2u85vXfjcJmR7cXpQhqe2rD
 
