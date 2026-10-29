@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict EyCW1BYuEmlRNv674yMWfGBTrGxAhBKy90dXxaP7TyK4N7PFbyaSN3vfszSPTTf
+\restrict N2hVOLwwl7UEYdv2PSYqdwBtZr8IbkaG6FfpVRDPnZzO7hHZBQ1emleEKd2hPMP
 
 -- Dumped from database version 18.6
 -- Dumped by pg_dump version 18.6
@@ -29,9 +29,9 @@ CREATE DATABASE periodic_table WITH TEMPLATE = template0 ENCODING = 'UTF8' LOCAL
 
 ALTER DATABASE periodic_table OWNER TO freecodecamp;
 
-\unrestrict EyCW1BYuEmlRNv674yMWfGBTrGxAhBKy90dXxaP7TyK4N7PFbyaSN3vfszSPTTf
+\unrestrict N2hVOLwwl7UEYdv2PSYqdwBtZr8IbkaG6FfpVRDPnZzO7hHZBQ1emleEKd2hPMP
 \connect periodic_table
-\restrict EyCW1BYuEmlRNv674yMWfGBTrGxAhBKy90dXxaP7TyK4N7PFbyaSN3vfszSPTTf
+\restrict N2hVOLwwl7UEYdv2PSYqdwBtZr8IbkaG6FfpVRDPnZzO7hHZBQ1emleEKd2hPMP
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -55,8 +55,8 @@ SET default_table_access_method = heap;
 
 CREATE TABLE public.elements (
     atomic_number integer NOT NULL,
-    symbol character varying(2),
-    name character varying(40)
+    symbol character varying(2) NOT NULL,
+    name character varying(40) NOT NULL
 );
 
 
@@ -116,11 +116,27 @@ ALTER TABLE ONLY public.elements
 
 
 --
+-- Name: elements elements_name_key; Type: CONSTRAINT; Schema: public; Owner: freecodecamp
+--
+
+ALTER TABLE ONLY public.elements
+    ADD CONSTRAINT elements_name_key UNIQUE (name);
+
+
+--
 -- Name: elements elements_pkey; Type: CONSTRAINT; Schema: public; Owner: freecodecamp
 --
 
 ALTER TABLE ONLY public.elements
     ADD CONSTRAINT elements_pkey PRIMARY KEY (atomic_number);
+
+
+--
+-- Name: elements elements_symbol_key; Type: CONSTRAINT; Schema: public; Owner: freecodecamp
+--
+
+ALTER TABLE ONLY public.elements
+    ADD CONSTRAINT elements_symbol_key UNIQUE (symbol);
 
 
 --
@@ -143,5 +159,5 @@ ALTER TABLE ONLY public.properties
 -- PostgreSQL database dump complete
 --
 
-\unrestrict EyCW1BYuEmlRNv674yMWfGBTrGxAhBKy90dXxaP7TyK4N7PFbyaSN3vfszSPTTf
+\unrestrict N2hVOLwwl7UEYdv2PSYqdwBtZr8IbkaG6FfpVRDPnZzO7hHZBQ1emleEKd2hPMP
 
