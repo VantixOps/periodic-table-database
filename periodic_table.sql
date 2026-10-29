@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict g2RyQa4HsRVzTceJHTwRrePiJeR4gVy7YkkoRh1P2u85vXfjcJmR7cXpQhqe2rD
+\restrict RS86foOxy6U7vuep5KaXcmpBoE56qjjk4n4vHYyAmtQ7a0EcFdWCpzXb7AoRIQC
 
 -- Dumped from database version 18.6
 -- Dumped by pg_dump version 18.6
@@ -29,9 +29,9 @@ CREATE DATABASE periodic_table WITH TEMPLATE = template0 ENCODING = 'UTF8' LOCAL
 
 ALTER DATABASE periodic_table OWNER TO freecodecamp;
 
-\unrestrict g2RyQa4HsRVzTceJHTwRrePiJeR4gVy7YkkoRh1P2u85vXfjcJmR7cXpQhqe2rD
+\unrestrict RS86foOxy6U7vuep5KaXcmpBoE56qjjk4n4vHYyAmtQ7a0EcFdWCpzXb7AoRIQC
 \connect periodic_table
-\restrict g2RyQa4HsRVzTceJHTwRrePiJeR4gVy7YkkoRh1P2u85vXfjcJmR7cXpQhqe2rD
+\restrict RS86foOxy6U7vuep5KaXcmpBoE56qjjk4n4vHYyAmtQ7a0EcFdWCpzXb7AoRIQC
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -78,6 +78,18 @@ CREATE TABLE public.properties (
 ALTER TABLE public.properties OWNER TO freecodecamp;
 
 --
+-- Name: types; Type: TABLE; Schema: public; Owner: freecodecamp
+--
+
+CREATE TABLE public.types (
+    type_id integer NOT NULL,
+    type character varying(30) NOT NULL
+);
+
+
+ALTER TABLE public.types OWNER TO freecodecamp;
+
+--
 -- Data for Name: elements; Type: TABLE DATA; Schema: public; Owner: freecodecamp
 --
 
@@ -105,6 +117,15 @@ INSERT INTO public.properties VALUES (6, 'nonmetal', 12.011000, 3550, 4027);
 INSERT INTO public.properties VALUES (7, 'nonmetal', 14.007000, -210.1, -195.8);
 INSERT INTO public.properties VALUES (8, 'nonmetal', 15.999000, -218, -183);
 INSERT INTO public.properties VALUES (1000, 'metalloid', 1.000000, 10, 100);
+
+
+--
+-- Data for Name: types; Type: TABLE DATA; Schema: public; Owner: freecodecamp
+--
+
+INSERT INTO public.types VALUES (1, 'metal');
+INSERT INTO public.types VALUES (2, 'metalloid');
+INSERT INTO public.types VALUES (3, 'nonmetal');
 
 
 --
@@ -156,6 +177,14 @@ ALTER TABLE ONLY public.properties
 
 
 --
+-- Name: types types_pkey; Type: CONSTRAINT; Schema: public; Owner: freecodecamp
+--
+
+ALTER TABLE ONLY public.types
+    ADD CONSTRAINT types_pkey PRIMARY KEY (type_id);
+
+
+--
 -- Name: properties properties_atomic_number_fkey; Type: FK CONSTRAINT; Schema: public; Owner: freecodecamp
 --
 
@@ -167,5 +196,5 @@ ALTER TABLE ONLY public.properties
 -- PostgreSQL database dump complete
 --
 
-\unrestrict g2RyQa4HsRVzTceJHTwRrePiJeR4gVy7YkkoRh1P2u85vXfjcJmR7cXpQhqe2rD
+\unrestrict RS86foOxy6U7vuep5KaXcmpBoE56qjjk4n4vHYyAmtQ7a0EcFdWCpzXb7AoRIQC
 
