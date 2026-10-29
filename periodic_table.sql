@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict bc61Z2uE9Zxu1QrxE0TGJjlLDO6uaijzYEZcEARwAEeVCLVTkNryriILLXmGbJl
+\restrict gvH89MUqWYc12Efnc9lZoWQtb9Ut67jvVNsLKTYTf0BOhb7O4bkrdoqoXqE8Rkf
 
 -- Dumped from database version 18.6
 -- Dumped by pg_dump version 18.6
@@ -29,9 +29,9 @@ CREATE DATABASE periodic_table WITH TEMPLATE = template0 ENCODING = 'UTF8' LOCAL
 
 ALTER DATABASE periodic_table OWNER TO freecodecamp;
 
-\unrestrict bc61Z2uE9Zxu1QrxE0TGJjlLDO6uaijzYEZcEARwAEeVCLVTkNryriILLXmGbJl
+\unrestrict gvH89MUqWYc12Efnc9lZoWQtb9Ut67jvVNsLKTYTf0BOhb7O4bkrdoqoXqE8Rkf
 \connect periodic_table
-\restrict bc61Z2uE9Zxu1QrxE0TGJjlLDO6uaijzYEZcEARwAEeVCLVTkNryriILLXmGbJl
+\restrict gvH89MUqWYc12Efnc9lZoWQtb9Ut67jvVNsLKTYTf0BOhb7O4bkrdoqoXqE8Rkf
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -95,14 +95,14 @@ ALTER TABLE public.types OWNER TO freecodecamp;
 --
 
 INSERT INTO public.elements VALUES (1, 'H', 'Hydrogen');
-INSERT INTO public.elements VALUES (2, 'he', 'Helium');
-INSERT INTO public.elements VALUES (3, 'li', 'Lithium');
+INSERT INTO public.elements VALUES (2, 'He', 'Helium');
+INSERT INTO public.elements VALUES (3, 'Li', 'Lithium');
 INSERT INTO public.elements VALUES (4, 'Be', 'Beryllium');
 INSERT INTO public.elements VALUES (5, 'B', 'Boron');
 INSERT INTO public.elements VALUES (6, 'C', 'Carbon');
 INSERT INTO public.elements VALUES (7, 'N', 'Nitrogen');
 INSERT INTO public.elements VALUES (8, 'O', 'Oxygen');
-INSERT INTO public.elements VALUES (1000, 'mT', 'moTanium');
+INSERT INTO public.elements VALUES (1000, 'Mt', 'moTanium');
 
 
 --
@@ -205,5 +205,5 @@ ALTER TABLE ONLY public.properties
 -- PostgreSQL database dump complete
 --
 
-\unrestrict bc61Z2uE9Zxu1QrxE0TGJjlLDO6uaijzYEZcEARwAEeVCLVTkNryriILLXmGbJl
+\unrestrict gvH89MUqWYc12Efnc9lZoWQtb9Ut67jvVNsLKTYTf0BOhb7O4bkrdoqoXqE8Rkf
 
