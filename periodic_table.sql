@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict KpIbvNIpmf9CobxH2VxcHcefqFjzQDq5skIVYa9niC1yKsByKDhSm3T6nhdyAMd
+\restrict EyCW1BYuEmlRNv674yMWfGBTrGxAhBKy90dXxaP7TyK4N7PFbyaSN3vfszSPTTf
 
 -- Dumped from database version 18.6
 -- Dumped by pg_dump version 18.6
@@ -29,9 +29,9 @@ CREATE DATABASE periodic_table WITH TEMPLATE = template0 ENCODING = 'UTF8' LOCAL
 
 ALTER DATABASE periodic_table OWNER TO freecodecamp;
 
-\unrestrict KpIbvNIpmf9CobxH2VxcHcefqFjzQDq5skIVYa9niC1yKsByKDhSm3T6nhdyAMd
+\unrestrict EyCW1BYuEmlRNv674yMWfGBTrGxAhBKy90dXxaP7TyK4N7PFbyaSN3vfszSPTTf
 \connect periodic_table
-\restrict KpIbvNIpmf9CobxH2VxcHcefqFjzQDq5skIVYa9niC1yKsByKDhSm3T6nhdyAMd
+\restrict EyCW1BYuEmlRNv674yMWfGBTrGxAhBKy90dXxaP7TyK4N7PFbyaSN3vfszSPTTf
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -70,8 +70,8 @@ CREATE TABLE public.properties (
     atomic_number integer NOT NULL,
     type character varying(30),
     atomic_mass numeric(9,6) CONSTRAINT properties_weight_not_null NOT NULL,
-    melting_point numeric,
-    boiling_point numeric
+    melting_point_celsius numeric NOT NULL,
+    boiling_point_celsius numeric NOT NULL
 );
 
 
@@ -143,5 +143,5 @@ ALTER TABLE ONLY public.properties
 -- PostgreSQL database dump complete
 --
 
-\unrestrict KpIbvNIpmf9CobxH2VxcHcefqFjzQDq5skIVYa9niC1yKsByKDhSm3T6nhdyAMd
+\unrestrict EyCW1BYuEmlRNv674yMWfGBTrGxAhBKy90dXxaP7TyK4N7PFbyaSN3vfszSPTTf
 
